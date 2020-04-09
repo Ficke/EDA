@@ -31,8 +31,6 @@ mrg <-
 
 par(mfrow = c(1, 1))
 
-#get dates out
-dates <- mrg$year
 SumYear <- with(mrg, tapply(Emissions, year, sum, na.rm = T))
 summary(SumYear)
 d0 <- data.frame(Year = as.integer(names(SumYear)), Sum = SumYear)
